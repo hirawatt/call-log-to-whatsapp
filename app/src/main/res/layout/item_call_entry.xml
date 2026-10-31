@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/card_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Avatar Initials / Photo Container -->
+        <FrameLayout
+            android:id="@+id/flAvatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_initial_avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAvatarInitials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/avatar_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="JD" />
+        </FrameLayout>
+
+        <!-- Contact Name -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnWhatsApp"
+            app:layout_constraintStart_toEndOf="@id/flAvatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="John Doe" />
+
+        <!-- Phone Number -->
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/btnWhatsApp"
+            app:layout_constraintStart_toEndOf="@id/flAvatar"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="+91 98765 43210" />
+
+        <!-- Call Type Icon, Date, Duration Layout -->
+        <LinearLayout
+            android:id="@+id/layoutMeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/btnWhatsApp"
+            app:layout_constraintStart_toEndOf="@id/flAvatar"
+            app:layout_constraintTop_toBottomOf="@id/tvNumber">
+
+            <ImageView
+                android:id="@+id/ivCallType"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_call_incoming"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvCallMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="Incoming • Today 2:30 PM • 1m 45s" />
+        </LinearLayout>
+
+        <!-- Business Name Badge (Optional) -->
+        <TextView
+            android:id="@+id/tvWaBusinessBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/badge_business_bg"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:textColor="@color/badge_business_text"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/flAvatar"
+            app:layout_constraintTop_toBottomOf="@id/layoutMeta"
+            tools:text="WA Business: Swiggy"
+            tools:visibility="visible" />
+
+        <!-- WhatsApp Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWhatsApp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/accent_whatsapp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingHorizontal="12dp"
+            android:text="@string/whatsapp_chat"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_whatsapp"
+            app:iconGravity="textStart"
+            app:iconPadding="6dp"
+            app:iconSize="16dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

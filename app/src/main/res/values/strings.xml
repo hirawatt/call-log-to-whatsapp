@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Call Log to WA</string>
+    <string name="search_hint">Search by name or number…</string>
+    <string name="permission_required_title">Permissions Required</string>
+    <string name="permission_required_desc">This app needs permission to access Call Logs and Contacts to show your recent calls and resolve names.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="no_call_logs">No call logs found</string>
+    <string name="whatsapp_chat">WhatsApp</string>
+    <string name="business_account">WA Business</string>
+    <string name="incoming_call">Incoming</string>
+    <string name="outgoing_call">Outgoing</string>
+    <string name="missed_call">Missed</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#075E54</color>
+    <color name="primary_dark">#054C44</color>
+    <color name="accent_whatsapp">#25D366</color>
+    <color name="accent_whatsapp_dark">#1EBE5D</color>
+    <color name="bg_main">#F4F6F8</color>
+    <color name="card_bg">#FFFFFF</color>
+    
+    <color name="text_primary">#1D232A</color>
+    <color name="text_secondary">#6B7280</color>
+    
+    <color name="call_incoming">#10B981</color>
+    <color name="call_outgoing">#3B82F6</color>
+    <color name="call_missed">#EF4444</color>
+    
+    <color name="avatar_bg">#075E54</color>
+    <color name="avatar_text">#FFFFFF</color>
+    
+    <color name="badge_business_bg">#E0F2FE</color>
+    <color name="badge_business_text">#0369A1</color>
+</resources>
